@@ -1,0 +1,12 @@
+.point-row {
+    margin-top: 0.5rem;
+    display: flex;
+}
+.point {
+    background-color: red;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    flex-direction: row;
+    margin-right: 1rem;
+}
