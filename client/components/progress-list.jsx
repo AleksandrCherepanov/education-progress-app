@@ -1,13 +1,15 @@
 import React, { PureComponent } from 'react';
 import UserList from './user-list';
-import Container from 'react-bootstrap/Container';
+import { Container, AppBar, Typography } from '@material-ui/core';
 
 
 class ProgressList extends PureComponent {
     render() {
-        return (
-            <Container>
-                <h1>Progress List</h1>
+        return (            
+            <Container>     
+                <AppBar position="static">
+                <Typography variant="h6">Education progress</Typography>
+                </AppBar>   
                 <UserList />
             </Container>
         )

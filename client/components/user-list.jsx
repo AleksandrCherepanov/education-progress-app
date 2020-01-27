@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { getUserProgress, getUserRegress, groupUsersByEmail } from '../containers/users';
 import RegressBar from './regress-bar';
 import ProgressBar from './progress-bar';
+import { Card, CardHeader, CardContent, Typography, CardActions } from '@material-ui/core';
 import styles from '../styles/user-list.css';
 
 const isFetched = (data) => {
@@ -29,9 +30,24 @@ class UserList extends PureComponent {
             listUsers = groupUsersByEmail(this.state);
 
             Object.keys(listUsers).forEach((user) => {
-                userComponents.push(<h3 className='user-name' key={user + 'header'}>{user.replace("@xsolla.com", "")}</h3>);
-                userComponents.push(<ProgressBar progress = { listUsers[user].progress } key={user + 'progress'}/>);
-                userComponents.push(<RegressBar regressCount = { listUsers[user].regress } key={user + 'regress'}/>);
+                userComponents.push(
+                    <Card className='user-card'>                    
+                        <CardHeader title={
+                            <Typography variant="h5" component="h2">
+                                { user.replace("@xsolla.com", "") }
+                            </Typography>                                
+                        } />
+                        <CardContent>
+                            <Typography variant="h6">
+                                { listUsers[user].progress + '%' }
+                            </Typography>
+                            <ProgressBar progress = { listUsers[user].progress } key={user + 'progress'}/>                    
+                        </CardContent>
+                        <CardActions>
+                            <RegressBar className='user-point' regressCount = { listUsers[user].regress } key={user + 'regress'}/>
+                        </CardActions>
+                    </Card>    
+                );
             });
         }
         
@@ -40,7 +56,7 @@ class UserList extends PureComponent {
             (
                 <div>
                     { userComponents }
-                </div>
+                </div>                    
             ) 
             : "Is loading..."
     }
