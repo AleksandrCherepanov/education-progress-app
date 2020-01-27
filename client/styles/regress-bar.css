@@ -1,6 +1,6 @@
 .point-row {
-    margin-top: 0.5rem;
     display: flex;
+    padding-left: 8px;
 }
 .point {
     background-color: red;
