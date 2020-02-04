@@ -1,6 +1,5 @@
 import React, { PureComponent } from "react";
 import styles from './ui-header-app.css';
-import UIHeaderTag from "./ui-header-tag";
 
 class UIHeaderApp extends PureComponent {
     render() {

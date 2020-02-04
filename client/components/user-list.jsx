@@ -3,10 +3,6 @@ import { getUserCollection } from '../containers/users';
 import UIUserCard from '../ui-components/card/ui-user-card';
 import styles from '../styles/user-list.css';
 
-const isFetched = (data) => {
-    return Array.isArray(data) && data.length > 0;
-};
-
 class UserList extends PureComponent {
     constructor(props) {
         super(props);
@@ -21,7 +17,7 @@ class UserList extends PureComponent {
         const { userCollection } = this.state;
         let userComponents = [];
         
-        userCollection.forEach((user, index) => {
+        userCollection.forEach((user) => {
             const key = user.email;
             userComponents.push(<UIUserCard user={user} key={key} />);
         });

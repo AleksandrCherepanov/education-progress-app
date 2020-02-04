@@ -9,8 +9,8 @@ class ProgressBar extends PureComponent {
             <div className={`c100 p${progress} big green`}>
                 <span>{progress + '%'}</span>
                 <div className="slice">
-                    <div className="bar"></div>
-                    <div className="fill"></div>
+                    <div className="bar" />
+                    <div className="fill" />
                 </div>
             </div>
         )
