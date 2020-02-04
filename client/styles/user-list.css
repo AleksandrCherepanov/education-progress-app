@@ -1,3 +1,7 @@
-.user-name {
-    margin-top: 1rem;
+.list-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: start;
 }

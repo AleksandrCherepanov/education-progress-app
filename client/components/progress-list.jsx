@@ -1,15 +1,14 @@
 import React, { PureComponent } from 'react';
 import UserList from './user-list';
-import Container from 'react-bootstrap/Container';
-
+import UIHeaderApp from '../ui-components/header/ui-header-app';
 
 class ProgressList extends PureComponent {
     render() {
-        return (
-            <Container>
-                <h1>Progress List</h1>
+        return (            
+            <div>
+                <UIHeaderApp appName='Education progress' />    
                 <UserList />
-            </Container>
+            </div>
         )
     }
 }

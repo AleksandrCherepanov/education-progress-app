@@ -1,12 +1,18 @@
 import React, { PureComponent } from 'react';
-import { ProgressBar as ReactProgressBar } from 'react-bootstrap';
+import styles from '../ui-components/progress/progress-circle.css';
 
 class ProgressBar extends PureComponent {
     render() {
         let { progress } = this.props;
         progress = typeof progress === "number" ? progress : 0;
-        return(
-            <ReactProgressBar striped variant="success" now={progress} label={`${progress}%`} />
+        return (
+            <div className={`c100 p${progress} big green`}>
+                <span>{progress + '%'}</span>
+                <div className="slice">
+                    <div className="bar"></div>
+                    <div className="fill"></div>
+                </div>
+            </div>
         )
     }
 }

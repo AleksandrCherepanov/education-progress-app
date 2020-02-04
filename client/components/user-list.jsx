@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
-import { getUserProgress, getUserRegress, groupUsersByEmail } from '../containers/users';
-import RegressBar from './regress-bar';
-import ProgressBar from './progress-bar';
+import { getUserCollection } from '../containers/users';
+import UIUserCard from '../ui-components/card/ui-user-card';
 import styles from '../styles/user-list.css';
 
 const isFetched = (data) => {
@@ -11,38 +10,27 @@ const isFetched = (data) => {
 class UserList extends PureComponent {
     constructor(props) {
         super(props);
-        this.state = {progress: [], regress: []}
+        this.state = {userCollection: []}
     }
 
     componentDidMount() {
-        this.setState({progress: getUserProgress()});
-        this.setState({regress: getUserRegress()});
+        this.setState({userCollection: getUserCollection()});
     }
 
     render() {
-        let listUsers = {};
+        const { userCollection } = this.state;
         let userComponents = [];
-
-        const isReadyForRender = isFetched(this.state.progress) && isFetched(this.state.regress);    
-
-        if (isReadyForRender) {
-            listUsers = groupUsersByEmail(this.state);
-
-            Object.keys(listUsers).forEach((user) => {
-                userComponents.push(<h3 className='user-name' key={user + 'header'}>{user.replace("@xsolla.com", "")}</h3>);
-                userComponents.push(<ProgressBar progress = { listUsers[user].progress } key={user + 'progress'}/>);
-                userComponents.push(<RegressBar regressCount = { listUsers[user].regress } key={user + 'regress'}/>);
-            });
-        }
         
-        return isReadyForRender
-            ? 
-            (
-                <div>
-                    { userComponents }
-                </div>
-            ) 
-            : "Is loading..."
+        userCollection.forEach((user, index) => {
+            const key = user.email;
+            userComponents.push(<UIUserCard user={user} key={key} />);
+        });
+        
+        return (
+            <div className='list-container'>
+                { userComponents }
+            </div>
+        )
     }
 }
 
