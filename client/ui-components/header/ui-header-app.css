@@ -1,0 +1,14 @@
+.header-app {
+    background-color: #303b44;
+    min-height: 2.5rem;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    justify-items: center;
+}
+
+span {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}

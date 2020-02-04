@@ -1,40 +1,19 @@
-export const getUserProgress = () => {
+export const getUserCollection = () => {
     return [
         {
             email: 'a.cherepanov',
-            progress: 3
+            progress: 3,
+            regress: 12
         },
         {
             email: 'a.treschilov',
-            progress: 20
+            progress: 20,
+            regress: 1
+        },
+        {
+            email: 'p.sanachev',
+            progress: 40,
+            regress: 5
         }
     ]
-};
-
-export const getUserRegress = () => {
-    return [
-        {
-            email: 'a.cherepanov',
-            regress: 3
-        },
-        {
-            email: 'a.treschilov',
-            regress: 1
-        }
-    ] 
-};
-
-export const groupUsersByEmail = (state) => {
-    let usersList = {};
-    const {regress, progress} = state;
-
-    progress.forEach(element => {
-        usersList[element.email] = { ...usersList[element.email], progress: element.progress };
-    });
-
-    regress.forEach(element => {
-        usersList[element.email] = { ...usersList[element.email], regress: element.regress };
-    });
-
-    return usersList;
 };

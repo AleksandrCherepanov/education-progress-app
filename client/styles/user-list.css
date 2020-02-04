@@ -1,8 +1,7 @@
-.user-name {
-    margin-top: 1rem;
-}
-
-.user-card {
-    margin-top: 1rem;
-    background-color: #f5f5f5;
+.list-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: start;
 }
