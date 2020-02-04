@@ -20,7 +20,7 @@ module.exports = {
             'localhost'
         ],
         sockHost: 'localhost',
-        sockPort: 443
+        sockPort: 5000
     },
     module: {
         rules: [
