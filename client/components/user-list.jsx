@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
-import { getUserCollection } from '../containers/users';
+import React, {PureComponent} from 'react';
+import {getUserCollection} from '../containers/users';
 import UIUserCard from '../ui-components/card/ui-user-card';
-import styles from '../styles/user-list.css';
+import styles from '../styles/user-list.scss';
 
 class UserList extends PureComponent {
     constructor(props) {
@@ -14,17 +14,17 @@ class UserList extends PureComponent {
     }
 
     render() {
-        const { userCollection } = this.state;
+        const {userCollection} = this.state;
         let userComponents = [];
-        
+
         userCollection.forEach((user) => {
             const key = user.email;
-            userComponents.push(<UIUserCard user={user} key={key} />);
+            userComponents.push(<UIUserCard user={user} key={key}/>);
         });
-        
+
         return (
             <div className='list-container'>
-                { userComponents }
+                {userComponents}
             </div>
         )
     }

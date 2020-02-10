@@ -30,12 +30,25 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                test: /\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sassOptions: {
+                                includePaths: [
+                                    path.resolve(__dirname, './../node_modules/normalize-scss/sass'),
+                                ]
+                            }
+                        }
+                    }
+                ]
             }
         ]
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx', '.css']
+        extensions: ['*', '.js', '.jsx', '.scss']
     }
 };

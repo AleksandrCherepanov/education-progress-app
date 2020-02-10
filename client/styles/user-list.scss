@@ -1,0 +1,21 @@
+@import "../styles/main";
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .list-container {
+    @include flow-row-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .list-container {
+    @include flow-row-start;
+    margin-left: 20%;
+  }
+}
