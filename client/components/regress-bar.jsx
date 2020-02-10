@@ -1,15 +1,15 @@
-import React, { PureComponent } from 'react';
-import styles from '../styles/regress-bar.css';
+import React, {PureComponent} from 'react';
+import styles from '../styles/regress-bar.scss';
 
 class RegressBar extends PureComponent {
     render() {
-        let { regressCount } = this.props;
+        let {regressCount} = this.props;
         regressCount = typeof regressCount === "number" ? regressCount : 0;
 
         return (
             <div className='point-row'>
                 <div key={regressCount}>{regressCount}</div>
-                <div className="point" />
+                <div className="point"/>
             </div>
         )
     }

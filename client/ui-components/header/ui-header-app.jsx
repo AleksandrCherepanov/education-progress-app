@@ -1,13 +1,13 @@
-import React, { PureComponent } from "react";
-import styles from './ui-header-app.css';
+import React, {PureComponent} from "react";
+import styles from './ui-header-app.scss';
 
 class UIHeaderApp extends PureComponent {
     render() {
-        const { appName } = this.props;
+        const {appName} = this.props;
 
         return (
             <div className='header-app'>
-                <span>{ appName }</span>
+                <span>{appName}</span>
             </div>
         )
     }

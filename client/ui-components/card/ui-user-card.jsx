@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import RegressBar from '../../components/regress-bar';
 import ProgressBar from '../../components/progress-bar';
-import styles from './ui-user-card.css';
+import styles from './ui-user-card.scss';
 
 class UIUserCard extends PureComponent {
     render() {

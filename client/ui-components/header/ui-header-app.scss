@@ -1,0 +1,24 @@
+@import './../../styles/colors';
+@import './../../styles/fonts';
+@import './../../styles/main';
+
+.header-app {
+  background-color: $primary-color;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .header-app {
+    justify-content: left;
+    padding-left: 22%;
+  }
+}
+
+span {
+  font-size: 2rem;
+  font-family: $primary-font-family;
+  color: $secondary-color;
+}

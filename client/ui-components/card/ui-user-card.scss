@@ -1,0 +1,32 @@
+@import "../../styles/main";
+@import "../../styles/fonts";
+@import "../../styles/colors";
+
+.card {
+  margin-top: 2rem;
+  min-width: 20rem;
+  font-family: $primary-font-family;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .card {
+    margin-right: 5rem;
+  }
+}
+
+.card-user-name {
+  font-size: 2rem;
+  color: $primary-color;
+  margin-bottom: 2rem;
+}
+
+.card-user-progress {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  color: $primary-color;
+  margin-bottom: 2rem;
+}
