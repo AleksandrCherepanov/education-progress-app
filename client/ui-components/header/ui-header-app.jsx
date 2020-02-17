@@ -1,4 +1,5 @@
 import React, {PureComponent} from "react";
+import BurgerMenu from "../menu/burger-menu";
 import styles from './ui-header-app.scss';
 
 class UIHeaderApp extends PureComponent {
@@ -8,6 +9,7 @@ class UIHeaderApp extends PureComponent {
         return (
             <div className='header-app'>
                 <span>{appName}</span>
+                <BurgerMenu />
             </div>
         )
     }
