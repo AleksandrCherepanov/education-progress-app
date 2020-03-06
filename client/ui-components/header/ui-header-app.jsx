@@ -1,15 +1,19 @@
-import React, {PureComponent} from "react";
-import BurgerMenu from "../menu/burger-menu";
+import React, {PureComponent} from 'react';
+import classNames from 'classnames/bind';
+import Registration from '../registration/registration';
+
 import styles from './ui-header-app.scss';
+
+const cx = classNames.bind(styles);
 
 class UIHeaderApp extends PureComponent {
     render() {
         const {appName} = this.props;
 
         return (
-            <div className='header-app'>
+            <div className={cx('header-app')}>
                 <span>{appName}</span>
-                <BurgerMenu />
+                <Registration />
             </div>
         )
     }

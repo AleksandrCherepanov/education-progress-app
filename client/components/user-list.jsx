@@ -1,7 +1,12 @@
 import React, {PureComponent} from 'react';
+import classNames from 'classnames/bind';
+
 import {getUserCollection} from '../containers/users';
 import UIUserCard from '../ui-components/card/ui-user-card';
+
 import styles from '../styles/user-list.scss';
+
+const cx = classNames.bind(styles);
 
 class UserList extends PureComponent {
     constructor(props) {
@@ -15,6 +20,7 @@ class UserList extends PureComponent {
 
     render() {
         const {userCollection} = this.state;
+
         let userComponents = [];
 
         userCollection.forEach((user) => {
@@ -23,7 +29,7 @@ class UserList extends PureComponent {
         });
 
         return (
-            <div className='list-container'>
+            <div className={cx('list-container')}>
                 {userComponents}
             </div>
         )

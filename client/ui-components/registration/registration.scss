@@ -1,0 +1,23 @@
+@import './../../styles/colors';
+@import './../../styles/fonts';
+@import './../../styles/main';
+
+.registration {
+  display: flex;
+  font-family: $primary-font-family;
+
+  a {
+    text-decoration: none;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    margin-left: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+  }
+}
