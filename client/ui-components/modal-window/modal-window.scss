@@ -14,7 +14,7 @@
     z-index: 2;
     top: 0;
     bottom: 0;
-    min-width: 520px;
+    min-width: 320px;
   }
 
   .modal-window-content {
@@ -22,8 +22,8 @@
     position: relative;
     margin: 0 auto;
     top: 2rem;
-    width: 30rem;
-    height: 50rem;
+    width: 18rem;
+    height: 24rem;
     background-color: $secondary-color;
     border-radius: 0.5rem;
     z-index: 3;
@@ -33,7 +33,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      left: 27rem;
+      left: 15rem;
       width: 3rem;
       height: 3rem;
       color: $primary-color;
@@ -41,6 +41,68 @@
       font-size: 1.5rem;
       z-index: 3;
       cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .modal-window {
+    .modal-window-content {
+      display: flex;
+      position: relative;
+      margin: 0 auto;
+      top: 2rem;
+      width: 30rem;
+      height: 50rem;
+      background-color: $secondary-color;
+      border-radius: 0.5rem;
+      z-index: 3;
+
+      .modal-window-close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 27rem;
+        width: 3rem;
+        height: 3rem;
+        color: $primary-color;
+        font-family: $primary-font-family;
+        font-size: 1.5rem;
+        z-index: 3;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .modal-window {
+    .modal-window-content {
+      display: flex;
+      position: relative;
+      margin: 0 auto;
+      top: 2rem;
+      width: 30rem;
+      height: 50rem;
+      background-color: $secondary-color;
+      border-radius: 0.5rem;
+      z-index: 3;
+
+      .modal-window-close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 27rem;
+        width: 3rem;
+        height: 3rem;
+        color: $primary-color;
+        font-family: $primary-font-family;
+        font-size: 1.5rem;
+        z-index: 3;
+        cursor: pointer;
+      }
     }
   }
 }

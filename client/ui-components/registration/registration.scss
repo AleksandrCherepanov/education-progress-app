@@ -5,6 +5,7 @@
 .registration {
   display: flex;
   font-family: $primary-font-family;
+  margin-top: 1rem;
 
   a {
     text-decoration: none;
@@ -19,5 +20,17 @@
       background-color: $secondary-color;
       color: $primary-color;
     }
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .registration {
+    margin-top: 0
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .registration {
+    margin-top: 0;
   }
 }
