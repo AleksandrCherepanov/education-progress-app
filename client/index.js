@@ -4,10 +4,10 @@ import ProgressList from './components/progress-list';
 import {combineReducers, createStore} from 'redux';
 import './styles/main.scss';
 import {Provider} from 'react-redux';
-import {registrationModal} from './redux/reducers/menu';
+import {modalWindow} from './redux/modal-window/reducer-modal-window';
 
 const store = createStore(
-    combineReducers({registrationModal}),
+    combineReducers({modalWindow}),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
