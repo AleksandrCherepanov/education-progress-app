@@ -12,8 +12,8 @@ class Registration extends PureComponent {
 
         return (
             <div className={cx('registration')}>
-                <a href='#' onClick={toggleModalWindow}>Sign In</a>
-                <a href='#' onClick={toggleModalWindow}>Sign Up</a>
+                <div><a href='#' onClick={toggleModalWindow}>Sign In</a></div>
+                <div><a href='#' onClick={toggleModalWindow}>Sign Up</a></div>
             </div>
         )
     }
