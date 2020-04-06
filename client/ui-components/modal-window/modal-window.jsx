@@ -11,8 +11,6 @@ class ModalWindow extends PureComponent {
     render() {
         const {isModalWindowOpen, toggleModalWindow} = this.props;
 
-        console.log(isModalWindowOpen);
-
         return isModalWindowOpen && (
             <div className={cx('modal-window')}>
                 <div className={cx('modal-window-overlay')}/>
