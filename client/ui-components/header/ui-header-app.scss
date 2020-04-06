@@ -8,14 +8,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding: 2rem 1rem 2rem 1rem;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .header-app {
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 $padding-left 0 $padding-right;
+
+    span {
+      font-size: 1.70rem;
+    }
+  }
 }
 
 @media screen and (min-width: $desktop-width) {
   .header-app {
-    justify-content: left;
-    padding-left: 22%;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 $padding-left 0 $padding-right;
+
+    span {
+      font-size: 2rem;
+    }
   }
 }
+
+
 
 span {
   font-size: 2rem;
